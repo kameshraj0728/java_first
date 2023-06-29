@@ -1,0 +1,49 @@
+mport java.util.*;
+
+public class CollectionExample {
+    public static void main(String[] args) {
+        // ArrayList
+        List<String> arrayList = new ArrayList<>();
+        arrayList.add("Apple");
+        arrayList.add("Banana");
+        arrayList.add("Orange");
+        System.out.println("ArrayList: " + arrayList);
+
+        // LinkedList
+        List<Integer> linkedList = new LinkedList<>();
+        linkedList.add(10);
+        linkedList.add(20);
+        linkedList.add(30);
+        System.out.println("LinkedList: " + linkedList);
+
+        // HashSet
+        Set<String> hashSet = new HashSet<>();
+        hashSet.add("Cat");
+        hashSet.add("Dog");
+        hashSet.add("Elephant");
+        System.out.println("HashSet: " + hashSet);
+
+        // TreeSet
+        Set<Integer> treeSet = new TreeSet<>();
+        treeSet.add(5);
+        treeSet.add(2);
+        treeSet.add(8);
+        System.out.println("TreeSet: " + treeSet);
+
+        // HashMap
+        Map<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("One", 1);
+        hashMap.put("Two", 2);
+        hashMap.put("Three", 3);
+        System.out.println("HashMap: " + hashMap);
+
+        // TreeMap
+        Map<Integer, String> treeMap = new TreeMap<>();
+        treeMap.put(3, "Three");
+        treeMap.put(1, "One");
+        treeMap.put(2, "Two");
+        System.out.println("TreeMap: " + treeMap);
+    }
+}
+
+
