@@ -1,8 +1,19 @@
-public class ForLoopExample {
-    public static void main(String[] args) {
-        System.out.println("Counting from 1 to 5 using a for loop:");
-        for (int count = 1; count <= 5; count++) {
-            System.out.println(count);
-        }
-    }
-}
+package AssistedPractice;
+public class ForLoop 
+{ 
+ public static void main(String args[]) 
+ { 
+ 
+ for (int x = 2; x <= 4; x++) 
+ System.out.println("Value of x:" + x); 
+ } 
+
+package AssistedPractice;
+public class EnhancedForLoop 
+{ 
+public static void main(String[] args) 
+{ 
+ 
+ int arr[]={12,23,44,56,78}; 
+ 
+ for(int i:arr)
