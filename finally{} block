@@ -1,20 +1,25 @@
-public class FinallyBlockExample {
-    public static void main(String[] args) {
-        try {
-            int result = divideNumbers(10, 2);
-            System.out.println("Result: " + result);
-        } catch (ArithmeticException e) {
-            System.out.println("Exception caught: " + e.getMessage());
-        } finally {
-            System.out.println("Finally block executed.");
-        }
-    }
+class TestFinallyBlock
 
-    public static int divideNumbers(int num1, int num2) {
-        try {
-            return num1 / num2;
-        } catch (ArithmeticException e) {
-            throw new ArithmeticException("Cannot divide by zero.");
-        }
-    }
+public static void main(String args[]){ 
+try {
+
+int number=25/5;
+
+System.out.println(number);
+}
+
+catch(NullPointerException e)
+{
+
+System.out.println(e);
+}
+
+finally
+{
+
+System.out.println("The Execution of final block always happen ");
+}
+
+System.out.println("after final the rest of the code...");
+}
 }
