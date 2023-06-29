@@ -1,23 +1,29 @@
-package dem02;
-
-public class Car{
-      
-       private String color;
-       private String engineType;
-
-       //Constructor
-       public Car(String colorOfCar, String typeOfEngine)         {
-              color = colorOfCar;
-              engineType = typeOfEngine;
-   }
-
-        public void printCarProperties()  {
-              System.out.println("Color of Car =" + color);
-              System.out.println("Type of Engine =" + engineType);
-
-        public static void main(String[] args)  {
-              Car mercedes = new Car("silver", "petrol");
-              Car audi = new Car("black", "diesel");
-
-              audi.printCarProperties();
+public class Dog {
+ String breed;
+ int age;
+ String color;
+ void barking() {
+ }
+ void hungry() {
+ }
+ void sleeping() {
 }
+
+
+public class Puppy {
+ public Puppy(String name) {
+ // This constructor has one parameter, name.
+ System.out.println("Passed Name is :" + name );
+ }
+ public static void main(String []args) {
+ // Following statement would create an object myPuppy
+ Puppy myPuppy = new Puppy( "tommy" );
+
+
+
+public class Puppy {
+ public Puppy() {
+ }
+ public Puppy(String name) {
+ // This constructor has one parameter, name.
+ }}
