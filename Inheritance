@@ -1,0 +1,63 @@
+package inheritance;
+
+public class A extance D {
+
+      public void day() {
+
+               System.out.println("Today is Tuesday");
+        }
+      public static void main (String[] args)
+
+          A a = new A();
+          a.day();
+          a.date();
+      }
+
+}
+
+
+package inheritance;
+
+public class B extance D {
+
+      public void month() {
+
+               System.out.println("It is month of June");
+        }
+      public static void main (String[] args)
+
+          B b = new B();
+          b.month();
+          a.date();
+      }
+
+}
+
+package inheritance;
+
+public class C extance D {
+
+      public void year() {
+
+               System.out.println("Today is Tuesday");
+        }
+      public static void main (String[] args)
+
+          C c = new C();
+          c.day();
+          c.date();
+      }
+
+}
+
+package inheritance;
+
+public class D {
+
+      public void day() {
+
+               System.out.println("It is 27-06-2023");
+        }
+  
+     
+}
