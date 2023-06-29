@@ -1,63 +1,39 @@
-package inheritance;
+Class A{
+ public void methodA()
+ {
+ System.out.println("Base class method");
+ }
+Class B extends A{
+ public void methodB()
+ {
+ System.out.println("Child class method");
+ }
+ public static void main(String args[])
+ {
+ B obj = new B();
+ obj.methodA(); //calling super class method
+ obj.methodB(); //calling local 
 
-public class A extance D {
-
-      public void day() {
-
-               System.out.println("Today is Tuesday");
-        }
-      public static void main (String[] args)
-
-          A a = new A();
-          a.day();
-          a.date();
-      }
-
+Class X{
+ public void methodX()
+ {
+ System.out.println("Class X method");
+ } 
 }
-
-
-package inheritance;
-
-public class B extance D {
-
-      public void month() {
-
-               System.out.println("It is month of June");
-        }
-      public static void main (String[] args)
-
-          B b = new B();
-          b.month();
-          a.date();
-      }
-
+Class Y extends X{ 
+ public void methodY(){ 
+System.out.println("class Y method"); 
 }
-
-package inheritance;
-
-public class C extance D {
-
-      public void year() {
-
-               System.out.println("Today is Tuesday");
-        }
-      public static void main (String[] args)
-
-          C c = new C();
-          c.day();
-          c.date();
-      }
-
-}
-
-package inheritance;
-
-public class D {
-
-      public void day() {
-
-               System.out.println("It is 27-06-2023");
-        }
-  
-     
+Class Z extends Y{
+ public void methodZ()
+ {
+ System.out.println("class Z method");
+ }
+ public static void main(String args[])
+ {
+ Z obj = new Z();
+ obj.methodX(); //calling grand parent class method
+ obj.methodY(); //calling parent class method
+ obj.methodZ(); //calling local method
+ } 
 }
