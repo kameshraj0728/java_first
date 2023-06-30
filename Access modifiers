@@ -13,6 +13,7 @@ public static void main(String[] args) {
  obj.display(); 
  } 
 } 
+
 //2. using private access specifiers
 class priaccessspecifier 
 { 
@@ -30,6 +31,8 @@ public static void main(String[] args) {
  //obj.display();
  } 
 } 
+
+
 //3. using protected access specifiers
 package pack1; 
 public class proaccessspecifiers { 
@@ -47,6 +50,7 @@ public static void main(String[] args) {
  obj.display(); 
  } 
 }
+
 //4. using public access specifiers
 package pack1; 
 public class pubaccessspecifiers { 
@@ -55,6 +59,7 @@ public void display()
  System.out.println("This is Public Access Specifiers"); 
  } 
 } 
+
 //create another package
 package pack2; 
 import pack1.*; 
