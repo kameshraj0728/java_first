@@ -1,0 +1,56 @@
+package Demo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Amazon {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+
+        // Step 1: Open the browser and maximize it
+        driver.manage().window().maximize();
+
+        // Step 2: Navigate to https://www.amazon.in/
+        driver.get("https://www.amazon.in/");
+
+        // Step 3: Click on 'Mobiles' in the navigation bar
+        WebElement mobilesLink = driver.findElement(By.id("nav-xshop"));
+        mobilesLink.click();
+
+        // Step 4: Hover the pointer over 'Mobiles & Accessories'
+        WebElement mobilesAccessoriesMenu = driver.findElement(By.xpath("//span[text()='Mobiles & Accessories']"));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(mobilesAccessoriesMenu).build().perform();
+
+        // Step 5: Click on 'Apple' in the sub-menu
+        WebElement appleSubMenu = driver.findElement(By.xpath("//span[text()='Apple']"));
+        appleSubMenu.click();
+
+        // Step 6: Click on the first available phone
+        WebElement firstPhone = driver.findElement(By.xpath("(//div[@data-component-type='s-search-result'])[1]"));
+        firstPhone.click();
+
+        // Step 7: Switch focus to the new tab
+        String parentHandle = driver.getWindowHandle();
+        for (String handle : driver.getWindowHandles()) {
+            if (!handle.equals(parentHandle)) {
+                driver.switchTo().window(handle);
+                break;
+            }
+        }
+
+        // Step 8: Click on 'Buy Now' button
+        WebElement buyNowButton = driver.findElement(By.id("buy-now-button"));
+        buyNowButton.click();
+
+        // Step 9: Verify user sees the text 'Sign in' on the last page
+        boolean signInTextPresent = driver.getPageSource().contains("Sign in");
+        System.out.println("User sees 'Sign in': " + signInTextPresent);
+
+        // Step 10: Close the browser
+        driver.quit();
+    }
+}

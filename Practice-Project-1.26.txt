@@ -1,0 +1,39 @@
+package Demo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class MakeMyTrip {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+
+        // Step 1: Open the browser and maximize it
+        driver.manage().window().maximize();
+
+        // Step 2: Navigate to https://www.makemytrip.com/
+        driver.get("https://www.makemytrip.com/");
+
+        // Step 3: Locate web elements using Locators
+        // Locating the Flight tab
+        WebElement flightTab = driver.findElement(By.id("header_tab_flights"));
+        System.out.println("Flight Tab Text: " + flightTab.getText());
+
+        //Locating the From city input field
+        WebElement fromCityInput = driver.findElement(By.id("fromCity"));
+        System.out.println("From City Input Field Displayed: " + fromCityInput.isDisplayed());
+
+        // Locating the To city input field
+        WebElement toCityInput = driver.findElement(By.id("toCity"));
+        System.out.println("To City Input Field Enabled: " + toCityInput.isEnabled());
+
+        // Locating the Search button
+        WebElement searchButton = driver.findElement(By.xpath("//button[@data-cy='submit']"));
+        System.out.println("Search Button Tag Name: " + searchButton.getTagName());
+
+        
+        // Step 5: Close the browser
+        driver.quit();
+    }
+}
